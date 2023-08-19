@@ -9,6 +9,9 @@
     <!-- daisyUI and tailwindcss link  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font awsome url  -->
+    <script src="https://kit.fontawesome.com/ea57345992.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,15 +24,103 @@
                 </div>
                 <div class="w-full lg:w-1/2 text-center space-y-6">
                     <h2 class="text-2xl uppercase font-semibold">---Sale Ferver---</h2>
-                    <h1 class="text-4xl md:text-5xl font-bold md:px-16 lg:px-0">Purchase TK 200 or above & get <span class="text-[#E527B2]">20% off</span></h1>
+                    <h1 class="text-4xl md:text-5xl font-bold md:px-16 lg:px-0">Purchase TK 200 or above & get
+                        <span class="text-[#E527B2]">20% off</span>
+                    </h1>
                     <p class="py-6 font-semibold">
                         Use Promo Code
-                        <button class="btn text-[18px] uppercase text-white rounded-lg btn-primary ml-4 bg-[#E527B2]">SELL200</button>
+                        <button
+                            class="btn text-[18px] uppercase text-white rounded-lg btn-primary ml-4 bg-[#E527B2]">SELL200</button>
                     </p>
                 </div>
             </div>
         </div>
     </header>
+    <!-- end header section  -->
+
+
+    <!-- start main section  -->
+    <main class="bg-base-200">
+        <section class="container mx-auto py-12 px-8 lg:px-0">
+            <h2 class="text-4xl font-bold mb-8">Kitchenware</h2>
+            <div class="grid lg:grid-cols-4 gap-12">
+                <!-- all product  -->
+                <div class="lg:col-span-3">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- card one  -->
+                        <div class="card lg-w-[30%] bg-base-100 shadow-xl">
+                            <figure class="px-10 py-10 bg-base-200 m-4 rounded-lg">
+                                <img src="images/prod1.png" alt="Shoes" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <p class="text-yellow-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </p>
+                                <h2 class="card-title text-2xl">K. Accessories</h2>
+                                <p class="font-semibold"><span>39</span>.00 TK</p>
+                            </div>
+                        </div>
+
+                        <!-- card two  -->
+                        <div class="card lg-w-[30%] bg-base-100 shadow-xl">
+                            <figure class="px-10 py-10 bg-base-200 m-4 rounded-lg">
+                                <img src="images/prod1.png" alt="Shoes" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <p class="text-yellow-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </p>
+                                <h2 class="card-title text-2xl">K. Accessories</h2>
+                                <p class="font-semibold"><span>39</span>.00 TK</p>
+                            </div>
+                        </div>
+
+                        <!-- card three  -->
+                        <div class="card lg-w-[30%] bg-base-100 shadow-xl">
+                            <figure class="px-10 py-10 bg-base-200 m-4 rounded-lg">
+                                <img src="images/prod1.png" alt="Shoes" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <p class="text-yellow-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </p>
+                                <h2 class="card-title text-2xl">K. Accessories</h2>
+                                <p class="font-semibold"><span>39</span>.00 TK</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- price summary table -->
+                <div class="lg:col-span-1">
+                    <!-- coupon container  -->
+                    <div class="bg-base-100 p-4 rounded-lg shadow-xl md:w-1/2 lg:w-full">
+                        <h2 class="font-bold mb-2">Have Coupon?</h2>
+                        <form class="flex">
+                            <input type="text" class="px-2 py-4 rounded-lg border-2 border-amber-100"
+                                placeholder="Coupon Code">
+                            <button
+                                class="bg-[#E527B2] py-4 px-6 -ml-[10px] text-white font-semibold rounded-tr-lg rounded-br-lg">Apply</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- end main section  -->
+
 </body>
 
 </html>
