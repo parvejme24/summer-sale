@@ -29,4 +29,8 @@ for (let singleProduct of productCard) {
 }
 
 
-
+// promo code button click coupon discount 
+document.getElementById('defaultCoupon').addEventListener('click', function () {
+    let couponApplyField = document.getElementById('couponCode');
+    couponApplyField.value = 'SELL200';
+})
