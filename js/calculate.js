@@ -9,15 +9,16 @@ for (let singleProduct of productCard) {
 
 
         total += price;
-        setProductPrice('total', total.toFixed(2));
-        setProductPrice('grandTotal', total.toFixed(2));
+        setProductTotalDiscountPrice('total', total.toFixed(2));
+        setProductTotalDiscountPrice('grandTotal', total.toFixed(2));
 
-
+        buttonDisableAndEnable();
+        applyCoupon()
     })
 }
 
 // set product price and total price 
-function setProductPrice(totalId, total) {
+function setProductTotalDiscountPrice(totalId, total) {
     let totalElement = document.getElementById(totalId);
     let totalValue = parseFloat(totalElement.innerText);
     if (typeof totalValue === 'number') {
@@ -27,17 +28,26 @@ function setProductPrice(totalId, total) {
     }
 };
 
-document.getElementById('applyCoupon').addEventListener('click', function () {
+
+function applyCoupon() {
     let couponCodeElement = document.getElementById('couponCode');
     let couponCode = couponCodeElement.value;
+    couponCodeElement.value = '';
 
-    if('SELL200' === couponCode){
-        let result = calculateCouponDiscount(total);
-        setProductPrice('discount', result.toFixed(2));
+    if ('SELL200' === couponCode) {
+        let discount = calculateCouponDiscount(total);
+        let calculateDiscount = total - discount;
+        setProductTotalDiscountPrice('discount', discount.toFixed(2));
+        setProductTotalDiscountPrice('grandTotal', calculateDiscount.toFixed(2))
+    } else {
+        alert("Invalid Coupon");
     }
-})
+}
 
-function calculateCouponDiscount(totalPrice){
+function calculateCouponDiscount(totalPrice) {
     let discountValue = totalPrice * 0.2;
     return discountValue
 }
+
+
+

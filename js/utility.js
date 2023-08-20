@@ -3,10 +3,12 @@ let totalElement = document.getElementById('total');
 let totalElementString = totalElement.innerText;
 let totalValue = parseFloat(totalElementString);
 
+
+
 // reload home page and remove previous data 
-document.getElementById('reloadButton').addEventListener('click', function () {
-    location.reload();
-});
+// document.getElementById('reloadButton').addEventListener('click', function () {
+//     location.reload();
+// });
 
 
 // get and set product title 
@@ -27,5 +29,3 @@ function getPrice(priceId) {
     let priceValue = parseFloat(priceElementString);
     return priceValue;
 }
-
-console.log(totalValue);
