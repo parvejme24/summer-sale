@@ -236,7 +236,7 @@
                         <div class="flex">
                             <input id="couponCode" type="text" class="px-2 py-4 rounded-lg border-2 border-amber-100"
                                 placeholder="Coupon Code">
-                            <button onclick="applyCoupon()"
+                            <button onclick="applyCoupon()" id="applyCoupon" disabled 
                                 class="btn bg-[#E527B2] hover:bg-violet-600 text-white -ml-4 rounded-tl-none rounded-bl-none h-16">Apply</button>
                         </div>
                     </div>
@@ -259,7 +259,7 @@
                         <hr class="w-full mx-auto my-8">
 
                         <!-- Open the modal using ID.showModal() method -->
-                        <button id="makePurchase" class="btn bg-[#E527B2] hover:bg-fuchsia-600 text-white w-full"
+                        <button id="makePurchase" disabled class="btn bg-[#E527B2] hover:bg-fuchsia-600 text-white w-full"
                             onclick="my_modal_1.showModal()">Make Purchase</button>
                         <dialog id="my_modal_1" class="modal">
                             <form method="dialog" class="modal-box text-center">

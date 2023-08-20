@@ -1,4 +1,8 @@
 
+const makePurchaseButton = document.getElementById('makePurchase');
+const applyCouponButton = document.getElementById('applyCoupon');
+
+
 let productCard = document.querySelectorAll('#productCard');
 for (let singleProduct of productCard) {
     singleProduct.addEventListener('click', function () {
@@ -9,6 +13,18 @@ for (let singleProduct of productCard) {
         total += price;
         setProductTotalDiscountPrice('total', total.toFixed(2));
         setProductTotalDiscountPrice('grandTotal', total.toFixed(2));
+
+        if (total === 0) {
+            makePurchaseButton.setAttribute("disabled")
+        } else {
+            makePurchaseButton.removeAttribute("disabled")
+        }
+
+        if (total >= 200) {
+            applyCouponButton.removeAttribute("disabled");
+        } else {
+            applyCouponButton.setAttribute("disabled");
+        }
     })
 }
 
