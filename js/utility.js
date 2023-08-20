@@ -6,19 +6,17 @@ let totalValue = parseFloat(totalElementString);
 
 
 // reload home page and remove previous data 
-// document.getElementById('reloadButton').addEventListener('click', function () {
-//     location.reload();
-// });
+document.getElementById('reloadButton').addEventListener('click', function () {
+    location.reload();
+});
 
 
 // get and set product title 
-function getAndSetProductItemTitle(productTitleId, setId) {
-    let productTitleElement = document.getElementById(productTitleId);
-    let productTitle = productTitleElement.innerText;
+function getAndSetProductItemTitle(productTitle, setId) {
     const calculationEntry = document.getElementById(setId);
     const count = calculationEntry.childElementCount;
     const p = document.createElement('p');
-    p.innerHTML = `${count + 1} ${productTitle}`;
+    p.innerHTML = `${count + 1}.  ${productTitle}`;
     calculationEntry.appendChild(p);
 }
 
